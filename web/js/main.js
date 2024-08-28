@@ -14,6 +14,20 @@ function clearCart (event) {
         })
     }
 }
+function hideCart (event) {
+    $('#cart').modal('hide');
+    $('#order').modal('show');
+    $.ajax({
+        url: '/../cart/order',
+        type: 'GET',
+        success: function (res) {
+            $('#order .modal-content').html(res);
+        },
+        error: function (){
+            alert('error');
+        }
+    })
+}
 $('.product-button__add') .on('click', function (event) {
     event.preventDefault();
     let id = $(this).data('id');
