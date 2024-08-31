@@ -33,7 +33,6 @@ AppAsset::register($this);
             <div class="header">
                 <a href="/">На главную</a>
                 <a href="#">Вход в админку</a>
-                <a class="cart" data-toggle="modal" data-target=".bd-example-modal-xl">Корзина <span class="menuQ">(<?=$_SESSION['cart.totalQ'] ? $_SESSION['cart.totalQ'] : 0?>)</span></a>
                 <form action="<?=Url::to('/category/search')?>" method="get">
                     <input type="text" style="padding: 5px" placeholder="Поиск..." name="search" required>
                 </form>
@@ -53,21 +52,6 @@ AppAsset::register($this);
         </div>
     </footer>
 </section>
-<!-- Modal -->
-<div id="cart" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-
-    </div>
-  </div>
-</div>
-<div id="order" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-
-      </div>
-  </div>
-</div>
 <?php $this->endBody() ?>
 </body>
 </html>

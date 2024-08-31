@@ -10,13 +10,8 @@ class OrderGood extends \yii\db\ActiveRecord
     {
         return 'order_good';
     }
-    // public function rules()
-    // {
-    //     return [
-    //         [['order_id', 'product_id'], 'required'],
-    //         [['order_id', 'product_id', 'price', 'quantity', 'sum'], 'integer'],
-    //         [['name'], 'string', 'max' => 255],
-    //     ];
-    // }
+    public function getOrder(){
+        return $this->hasOne(OrderGood::class, ['id' => 'order_id']);
+    }
     
 }

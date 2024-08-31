@@ -1,8 +1,13 @@
 <?
 use yii\widgets\ActiveForm;
 ?>
-<h1>Оформление заказа</h1>
-<div>
+<div class="modal-header">
+    <h2 style="text-align: center">Оформление заказа</h2>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div style="padding: 2%;">
 
     <?$form = ActiveForm::begin()?>
     
@@ -10,7 +15,10 @@ use yii\widgets\ActiveForm;
     <?=$form->field($order, 'email')?>
     <?=$form->field($order, 'phone')?>
     <?=$form->field($order, 'address')?>
-    <button class="btn btn-success">Оформить заказ</button>
-    
+        <div class="modal-buttons" style="display: flex; padding: 15px; justify-content: space-around">
+            <button class="btn btn-success">Оформить заказ</button>
+        </div>
+
+
     <? ActiveForm::end() ?>
 </div>
