@@ -32,7 +32,12 @@ AppAsset::register($this);
         <div class="container">
             <div class="header">
                 <a href="/">На главную</a>
-                <a href="#">Вход в админку</a>
+                <? if (!Yii::$app->user->isGuest) {?><a href="/admin">Админка</a><?}?>
+                <? if (Yii::$app->user->isGuest) {?>
+                <a href="/admin/login">Вход в админку</a>
+                <?}else{?>
+                    <a href="/admin/logout">Выход</a>
+                <?}?>
                 <a class="cart" data-toggle="modal" data-target=".bd-example-modal-xl">Корзина <span class="menuQ">(<?=$_SESSION['cart.totalQ'] ? $_SESSION['cart.totalQ'] : 0?>)</span></a>
                 <form action="<?=Url::to('/category/search')?>" method="get">
                     <input type="text" style="padding: 5px" placeholder="Поиск..." name="search" required>

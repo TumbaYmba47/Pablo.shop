@@ -39,7 +39,7 @@ $config = [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.gmail.com',  // e.g. smtp.mandrillapp.com or smtp.gmail.com
                 'username' => 'paha.com123@gmail.com',
-                'password' => 'fxyr vajv pmes ffxv',
+                'password' => '*',
                 'port' => '465', // Port 25 is a very common port too
                 'encryption' => 'ssl', // It is often used, check your provider or mail server specs
             ],

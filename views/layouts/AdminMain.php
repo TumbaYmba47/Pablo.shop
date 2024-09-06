@@ -31,8 +31,8 @@ AppAsset::register($this);
     <header>
         <div class="container">
             <div class="header">
-                <a href="/">На главную</a>
-                <a href="#">Вход в админку</a>
+                <a href="/">На главную</a>  
+                <a href="/admin/logout">Выход</a>
                 <form action="<?=Url::to('/category/search')?>" method="get">
                     <input type="text" style="padding: 5px" placeholder="Поиск..." name="search" required>
                 </form>
